@@ -1,0 +1,98 @@
+body{
+	background:#1D70A2;
+	margin: 0;
+	padding: 0;
+	font-family: "Optima", sans-serif;
+	font-size: 1.05em;
+}
+
+.container{
+	width : 500px;
+	height: 800px;
+	background: url('images/blue.jpeg') no-repeat;
+	background-size: 1100px;
+	position: absolute;
+	top:80%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	color: white;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.container h1{
+	font-size: 40px;
+	margin-top: 70px;
+	margin-bottom: 40px;
+}
+
+.signUpImage{
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	left: -8%;
+	top: -5%;
+	cursor:pointer;
+}
+
+.tbox{
+	width: 280px;
+	height: 50px;
+	background: #173753;
+	border-radius: 15px;
+	margin: 10px auto;
+}
+
+.tbox input{
+	background: none;
+	border: none;
+	outline: none;
+	text-align: center;
+	width: 90%;
+	line-height: 37px;
+	font-family: "Optima", sans-serif;
+	font-size: 14px;
+	color: black;
+}
+
+.loginBtn{
+	width: 260px;
+	height: 40px;
+	background: white;
+	border-radius: 10px;
+	margin: 14px auto;
+	display: block;
+	font-family: "Optima", sans-serif;
+	border-color: #1B4353;
+	cursor: pointer;
+	color: #1B4353;
+}
+
+.forgot{
+	display: block;
+	width: 260px;
+	padding: 10px 0;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	margin: auto;
+	transition: 0.4s all;
+}
+
+.create{
+	position: absolute;
+	bottom: 180px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 260px;
+	padding: 10px 0;
+	text-decoration: none;
+	text-align: center;
+	transition: 0.4s all;
+	color: white;
+}
+
+a:hover{
+	background: #6DAEDB;
+	color: black;
+}
