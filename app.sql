@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2021 at 07:46 PM
+-- Generation Time: Feb 03, 2021 at 11:13 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -36,6 +36,13 @@ CREATE TABLE `user` (
   `password` varchar(255) NOT NULL,
   `profilePhoto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`fullName`, `email`, `residence`, `username`, `password`, `profilePhoto`) VALUES
+('Joan Waweru', 'laurenblue811@gmail.com', 'Nairobi', 'jwambuii', '$2y$10$hivj4qUFA5zAdc4u4Fv10usJdT3wJvr3usy4TeAN8qIzU.fDTqBaC', '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
