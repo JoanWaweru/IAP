@@ -3,7 +3,9 @@ include_once 'user.php';
 include_once 'connect.php';
 
 $con = new DBConnector();
+
 $pdo = $con->connectToDB();
+
 $event = $_POST['event'];
 
 if ($event == "register") {     
@@ -18,6 +20,7 @@ if ($event == "register") {
     $user->setResidence($residence);
     $user->setEmail($email);
     echo $user->register($pdo);
+
 } else if($event=="login"){
          //login 
          session_start();

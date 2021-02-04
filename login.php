@@ -9,9 +9,10 @@
 			<img src="images/user.svg" class="loginImage">
 
 			<h1 class="title">LOG IN</h1>
-	
 
-		<form action="accountCreation.php" method="POST">
+			
+
+		<form action="http://localhost/lab/accountCreation.php" method="POST">
 		<div class="tbox">
 			<label class="label">Username:</label>
 			<input type="text" placeholder="Input your username" value="" name="user">
@@ -20,7 +21,6 @@
 		<p></p>
 
 		<input type="hidden" name="event" value="login">
-
 
 		<div class="tbox">
 			<label class="label">Password:</label>
