@@ -28,5 +28,19 @@ if ($event == "register") {
     $pw = $_POST['pw'];
      $user = new User($user, $pw);
     echo $user->login($pdo);
+
+} else if($event=="changePassword"){
+    //change password
+    $user = $_POST['user'];
+    $pw = $_POST['pw'];
+    $newPw = $_POST['newPw'];
+    $user = new User($user, $pw);
+    $user->setNewPassword($newPw);
+    echo $user->changePassword($pdo);
+
+} else if($event=="logout"){
+    //logout
+    $user = $_POST['user'];
+    echo $user->logOut($pdo);
 }
  ?>

@@ -1,7 +1,3 @@
-<?php
-	require_once 'connect.php';
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,34 +11,18 @@
 			<h1 class="title">MY PROFILE</h1>
 	
 
-		<form>
-		<div class="tbox">
-			<p></p>
-			<label class="label">Full Name:</label><p></p>
-			<label style="color: grey;">Consumita Wamuklo</label>
-		</div>
+		<form action="http://localhost/lab/accountCreation.php" method="POST">
+			<div class="tbox">
+			    <label class="label">Username:</label>
+			    <input type="text" placeholder="Input your username" value="" name="user">
+		    </div>
 
-		<div class="tbox">
-			<p></p>
-			<label class="label">Email:</label><p></p>
-			<label style="color: grey;">wamunsita@gmail.com</label>
-		</div>
+            <p></p>
 
-		<div class="tbox">
-			<p></p>
-			<label class="label">Password:</label><p></p>
-			<label style="color: grey;">wamukloishere123</label>
-		</div>
+		<input type="hidden" name="event" value="logout">
 
-		<p></p>
+		<button class="loginBtn">LOGOUT</button>
 
-		<a href="login.php" class="loginBtn">LOGOUT</a>
-
-		<?php
-			$object = new database;
-			$object->connect();
-		?>
-		
 			</form>
 			
 
