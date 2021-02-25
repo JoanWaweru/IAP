@@ -26,7 +26,7 @@ if ($event == "register") {
          session_start();
     $user = $_POST['user'];
     $pw = $_POST['pw'];
-     $user = new User($user, $pw);
+    $user = new User($user, $pw);
     echo $user->login($pdo);
 
 } else if($event=="changePassword"){
@@ -40,7 +40,7 @@ if ($event == "register") {
 
 } else if($event=="logout"){
     //logout
-    $user = $_POST['user'];
-    echo $user->logOut($pdo);
+    session_start();
+    User::logOut();
 }
  ?>

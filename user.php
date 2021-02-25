@@ -81,21 +81,19 @@
 				window.location.href = 'login.php'; 
 				</script>";
             }
-            if (password_verify($this->pw, $row['password'])) {
+            else if (password_verify($this->pw, $row['password'])) {
 				$_SESSION['user']=$row['username'];
 				return "<script language='javascript'>
-				alert('Logged in Successfully!');
-				window.location.href = 'details.php'; 
+				// alert('Logged in Successfully!');
+				window.location.href = 'homePage.php';
 				</script>";
-                // return "<h1> Name =>".$row['fullName']."</h1><br><br> <span style='color:blue; font-size:100px;'> Work In Progress😊</span>";
-            }
-			// return "Your username or password is not correct";
-			return "<script language='javascript'>
+            }else{
+				return "<script language='javascript'>
 			alert('⚠Wrong Password. Try Again');
 			window.location.href = 'login.php'; 
 			</script>";
-
-        } catch (PDOException $e) {
+			}
+        }catch (PDOException $e) {
             return $e->getMessage();
         }
 }
@@ -137,29 +135,11 @@ public function changePassword($pdo){
         }
 }
 
-public function logOut($pdo){
-	try{
-		session_start();
-            $stmt4 = $pdo->prepare("SELECT * FROM user WHERE username=?");
-            $stmt4->execute([$this->user]);
-            $row = $stmt4->fetch();
-            
-            if ($row == null) {
-                return "<script language='javascript'>
-				alert('⚠This account does not exist. Try Again');
-				window.location.href = 'homePage.php'; 
-				</script>";
-            }else{
-				session_destroy();
-				return "<script language='javascript'>
-					 alert('You have logged out successfully! You are being directed to the login page.');
- 					window.location.href = 'login.php'; 
-  					</script>";
-			}
-		
-	}catch (PDOException $e){
-		return $e->getMessage();
-	}
+public function logOut(){
+	if(isset ($_SESSION['user'])){	
+		session_unset();
+		header("location:http://localhost/lab/login.php");
+	}		
 }
 	
 }

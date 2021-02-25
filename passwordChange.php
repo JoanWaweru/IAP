@@ -4,6 +4,8 @@
 	<title>CHANGE PASSWORD</title>
 
 	<link rel="stylesheet" type="text/css" href="passwordChange.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/passwordChange.js"></script>
 </head>
 <body>
 		<div class="container">
@@ -38,9 +40,9 @@
 
 		<h2><button class="loginBtn" name="changePassword">CHANGE PASSWORD</button></h2>
 
-		
-
 			</form>
+
+			<div id="result"></div>
 
 			<!-- <a href="login.php" class="create">GO BACK TO LOGIN PAGE</a> -->
 

@@ -1,3 +1,12 @@
+<?php
+	session_start();
+	if(isset ($_SESSION['user'])){
+		$username = $_SESSION['user'];
+	}else{
+		echo "Session not found!";
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,14 +23,15 @@
 		<form action="http://localhost/lab/accountCreation.php" method="POST">
 			<div class="tbox">
 			    <label class="label">Username:</label>
-			    <input type="text" placeholder="Input your username" value="" name="user">
+				<br><br>
+			    <?php
+					echo $username;
+				?>
 		    </div>
 
             <p></p>
 
-		<input type="hidden" name="event" value="logout">
-
-		<button class="loginBtn">LOGOUT</button>
+		<button class="loginBtn" value="logout" name="event">LOGOUT</button>
 
 			</form>
 			

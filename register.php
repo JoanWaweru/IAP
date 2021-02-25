@@ -7,6 +7,8 @@
 <head>
 	<title>REGISTRATION PAGE</title>
 	<link rel="stylesheet" type="text/css" href="register.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/register.js"></script>
 </head>
 <body>
 		<div class="container">
@@ -68,7 +70,7 @@
 
 			</form>
 
-			
+			<div id="result"></div>
 
 			<a href="login.php" class="forgot">GO TO LOGIN PAGE</a>
 
