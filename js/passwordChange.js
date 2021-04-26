@@ -10,6 +10,6 @@ $(document).ready(function(){
         });
 
 		alert('Password changed successfully! You are being directed to the login page.');
-        window.location.href = 'login.php'; 
+        window.location.href = 'http://localhost/IAP/login.php'; 
     });
 });

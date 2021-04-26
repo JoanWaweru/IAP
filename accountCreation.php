@@ -42,5 +42,16 @@ if ($event == "register") {
     //logout
     session_start();
     User::logOut();
+
+} else if($event=="order"){
+    //order
+    session_start();
+    $dishName = $_POST['dishName'];
+    $amount = $_POST['amount'];
+	echo "<script language='javascript'>
+                    alert('⚠Oops! This feature is currently unavailable☹.Come back soon!');
+                    window.location.href = 'http://localhost/IAP/homePage.php'; 
+                    </script>";
+
 }
  ?>

@@ -3,9 +3,9 @@
 <head>
 	<title>CHANGE PASSWORD</title>
 
-	<link rel="stylesheet" type="text/css" href="passwordChange.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/IAP/passwordChange.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/passwordChange.js"></script>
+	<script type="text/javascript" src="http://localhost/IAP/js/passwordChange.js"></script>
 </head>
 <body>
 		<div class="container">
@@ -14,7 +14,7 @@
 			<h1 class="title">CHANGE PASSWORD</h1>
 	
 
-		<form action="http://localhost/lab/accountCreation.php" method="POST">
+		<form action="http://localhost/IAP/accountCreation.php" method="POST">
 		<div class="tbox">
 			<label class="label">Username:</label>
 			<input type="text" placeholder="Input your username" value="" name="user">

@@ -6,9 +6,9 @@
 <html>
 <head>
 	<title>REGISTRATION PAGE</title>
-	<link rel="stylesheet" type="text/css" href="register.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/IAP/register.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/register.js"></script>
+	<script type="text/javascript" src="http://localhost/IAP/js/register.js"></script>
 </head>
 <body>
 		<div class="container">
@@ -17,7 +17,8 @@
 			<h1 class="title">REGISTRATION</h1>
 	
 
-		<form method="POST" action="http://localhost/lab/accountCreation.php">
+		<form method="POST" action="http://localhost/IAP/accountCreation.php">
+			
 		<div class="tbox">
 
 			<label class="label">Full Name:</label>
@@ -72,7 +73,7 @@
 
 			<div id="result"></div>
 
-			<a href="login.php" class="forgot">GO TO LOGIN PAGE</a>
+			<a href="http://localhost/IAP/login.php" class="forgot">GO TO LOGIN PAGE</a>
 
 		</div>
 		

@@ -61,7 +61,7 @@
 			// return "Successfully registered!";   
 			return "<script language='javascript'>
 			alert('Successfully registered! You will be directed to the login page.');
-			window.location.href = 'login.php'; 
+			window.location.href = 'http://localhost/IAP/login.php'; 
 			</script>";
 	        }catch (PDOException $e){
 	           	return $e->getMessage();
@@ -78,19 +78,19 @@
             if ($row == null) {
                 return "<script language='javascript'>
 				alert('⚠This account does not exist. Try Again');
-				window.location.href = 'login.php'; 
+				window.location.href = 'http://localhost/IAP/login.php'; 
 				</script>";
             }
             else if (password_verify($this->pw, $row['password'])) {
 				$_SESSION['user']=$row['username'];
 				return "<script language='javascript'>
 				// alert('Logged in Successfully!');
-				window.location.href = 'homePage.php';
+				window.location.href = 'http://localhost/IAP/homePage.php';
 				</script>";
             }else{
 				return "<script language='javascript'>
 			alert('⚠Wrong Password. Try Again');
-			window.location.href = 'login.php'; 
+			window.location.href = 'http://localhost/IAP/login.php'; 
 			</script>";
 			}
         }catch (PDOException $e) {
@@ -110,7 +110,7 @@ public function changePassword($pdo){
 		if ($row == null) {
 			return "<script language='javascript'>
 			alert('⚠This account does not exist. Try Again');
-			window.location.href = 'passwordChange.php'; 
+			window.location.href = 'http://localhost/IAP/passwordChange.php'; 
 			</script>";
 
 		}
@@ -122,12 +122,12 @@ public function changePassword($pdo){
 			$update_password_stmt->execute($update_password_args);
 			return "<script language='javascript'>
 					 alert('Password changed successfully! You are being directed to the login page.');
- 					window.location.href = 'login.php'; 
+ 					window.location.href = 'http://localhost/IAP/login.php'; 
   					</script>";
 			
 		}return "<script language='javascript'>
 		alert('⚠Password not changed. Try Again');
-		window.location.href = 'passwordChange.php'; 
+		window.location.href = 'http://localhost/IAP/passwordChange.php'; 
 		</script>";
 
         } catch (PDOException $e) {
@@ -138,7 +138,7 @@ public function changePassword($pdo){
 public function logOut(){
 	if(isset ($_SESSION['user'])){	
 		session_unset();
-		header("location:http://localhost/lab/login.php");
+		header("location:http://localhost/IAP/login.php");
 	}		
 }
 	

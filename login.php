@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>LOG IN PAGE</title>
-	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/IAP/login.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="http://localhost/IAP/js/login.js"></script>
 
 </head>
 
@@ -42,9 +42,9 @@
 
 			<div id="result"></div>
 			
-			<a href="passwordChange.php" class="forgot">FORGOT PASSWORD?</a>
+			<a href="http://localhost/IAP/passwordChange.php" class="forgot">FORGOT PASSWORD?</a>
 
-			<a href="register.php" class="create">CREATE ACCOUNT</a>
+			<a href="http://localhost/IAP/register.php" class="create">CREATE ACCOUNT</a>
 			
 
 		</div>
